@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background: #647df9;
+}
+
+.container{
+    max-width: 1080px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:20px 30px;
+}
+
+.card{
+    background: #ffffff;
+    width:calc(33% - 20px);
+    padding: 30px;
+    position: relative;
+}
+
+.card .price-card{
+    display: flex;
+    justify-content:center;
+}
+
+.price-card .price-area{
+    height:120px;
+    width:120px;
+    border-radius:50%;
+    padding:2px;
+}
+
+.price-area .inner-area{
+    height: 100%;
+    width:100%;
+    border-radius:50%;
+    border:3px solid #fff;
+    color: #fff;
+    line-height:120px;
+    text-align:center;
+    position: relative;
+}
+
+.price-card .inner-area .text{
+    font-size: 25px;
+    font-weight: 500;
+    position: absolute;
+    top:-10px;
+    left:15px;
+}
+
+.price-card .inner-area .price{
+    font-size: 45px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.package-name{
+    background:#ffecb3;
+    height: 2px;
+    width:100%;
+    margin:30px 0;
+    position: relative;
+}
+
+.package-name::before{
+    position: absolute;
+    content:"";
+    left: 50%;
+    top:50%;
+    font-size:25px;
+    font-weight:600;
+    transform: translate(-50%, -50%);
+    background:#fff;
+    padding: 0 15px;
+}
+
+.features li{
+    list-style:none;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content:space-between;
+}
+.features li .list-name{
+    font-size: 17px;
+    font-weight:400;
+}
+
+.features li .icon{
+    font-size: 15px;
+}
+
+.features li .icon.check{
+    color:#2db94d;
+}
+
+.features li .icon.cross{
+    color:#cd3241;
+}
+
+.container .button{
+    display:flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.container .button button{
+    width: 80%; 
+    height: 50px;
+    border:none;
+    outline:none;
+    color:#fff;
+    font-size:20px;
+    font-weight: 500;
+    border-radius:25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@media (max-width:1020px){
+    .container .card{
+        width: calc(50% - 20px);
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width:698px){
+    .container .card{
+        width: calc(100%);
+    }
+}
+
+.container ::selection{
+ color: #fff;
+}
+
+.basic ::selection, .basic .price-area, .basic .inner-area{
+    background:#ffd861;
+}
+
+.basic .button button{
+    background:#fff;
+    color:#ffd861;
+    border:2px solid #ffd861;
+}
+
+.basic .button button:hover{
+    color:#fff;
+    background:#ffd861;
+    font-weight:600;
+}
+
+.premium ::selection,
+.premium .price-area,
+.premium .inner-area,
+.premium .button button{
+    background:#a26bfa;
+}
+
+.premium .button button:hover{
+    font-weight:600;
+}
+
+.premium .ribbon{
+    height:150px;
+    width:150px;
+    position:absolute;
+    top:-10px;
+    left:-10px;
+    overflow: hidden;
+}
+
+.premium .ribbon span{
+    position:absolute;
+    background:#a25bfa;
+    width: 200px;
+    padding:10px 0;
+    color:#fff;
+    text-align:center;
+    text-transform:uppercase;
+    top:30px;
+    right:0;
+    transform:rotate(-45deg);
+    font-size:15px;
+}
+
+.ultimate ::selection, .ultimate .price-area, .ultimate .inner-area{
+    background:#43ef8d;
+}
+
+.ultimate .button button{
+    background:#fff;
+    color:#43ef8d;
+    border:2px solid #43ef8d;
+}
+
+.ultimate .button button:hover{
+    color:#fff;
+    background:#43ef8d;
+    font-weight:600;
+}
+
+.container .button button:hover{
+    border-radius: 5px;
+}
+
+.basic .package-name{
+    background:#ffd861;
+}
+
+.basic .package-name::before{
+    content:"Basic"
+}
+
+.premium .package-name{
+    background:#a26bfa;
+}
+
+.premium .package-name::before{
+    content:"Premium"
+}
+
+.ultimate .package-name{
+    background:#43ef8d;
+}
+
+.ultimate .package-name::before{
+    content:"Ultimate"
+}
